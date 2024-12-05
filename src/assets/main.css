@@ -1,35 +1,96 @@
-@import './base.css';
+/* Общие стили */
+* {
+  box-sizing: border-box;
+}
 
-#app {
-  max-width: 1280px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+/* Стилизация карточки */
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 30px;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+/* Кнопка */
+.btn-primary {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.btn-primary:hover {
+  background-color: #0056b3;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+/* Компонент AppAlert */
+.alert {
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 80%;
+  text-align: center;
+}
+
+.alert-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.primary {
+  background-color: #d2f1d1;
+  border-color: #108a0c;
+  color: #4264a3;
+}
+
+.danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #842029;
+}
+
+.warning {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+}
+
+.btn {
+  padding: 8px 16px;
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #bbb;
 }
